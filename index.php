@@ -1,7 +1,7 @@
 <?php 
 $title = 'Index';
 require_once 'includes/header.php';
-require_once 'DB/conn.php';
+require_once 'db/conn.php';
 $results = $crud->getSpecialties();
 ?>
     <h1 class="text-center">Registration for IT Confrence</h1>
