@@ -18,7 +18,7 @@ else{
     <h1 class="text-center">Update Record</h1>
 
 <form method="post" action="editpost.php">
-  <input type="hidden" name="id" value="<?php $attendee['attendee_id'] ?>" />
+  <input type="hidden" name="id" value="<?php echo $attendee['attendee_id'] ?>" />
     <div class="form-group">
    <label for="FirstName">First Name</label>
    <input type="text" class="form-control" value= "<?php echo $attendee['firstname'] ?>" id="first name"name="firstname"  >
