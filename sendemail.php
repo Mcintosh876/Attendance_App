@@ -17,7 +17,7 @@ class SendEmail{
                 $response = $sendgrid->send($email);
                 return $response;
             } catch (Exception $e) {
-               echo 'Email exception caught:'.$e->getMessage()."/n";
+               echo 'email exception caught:'.$e->getMessage()."/n";
             }
 
         }

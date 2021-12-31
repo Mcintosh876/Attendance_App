@@ -18,12 +18,12 @@ $results = $crud->getSpecialties();
   
 </div>
 <div class="form-group">
-   <label for="DOB">Date Of Birth</label>
+   <label for="dob">Date Of Birth</label>
   <input type="text" class="form-control" id="dob" name="dob" >
  
 </div>
 <div class="form-group">
-<label for="Area of Specialization">Specialty</label>
+<label for="area of specialization">Specialty</label>
  <select class="form-select" id=" Specialization" name=" specialization">
    <?php while ($r = $results->fetch(PDO::FETCH_ASSOC)){?>
  <option value="<?php echo $r['specialty_id'] ?>"><?php echo $r['name']; ?></option>
@@ -58,7 +58,7 @@ $results = $crud->getSpecialties();
 <br>
 
 
-<button type="Submit" name="submit" class="btn btn-primary btn-block">submit</button>
+<button type="submit" name="submit" class="btn btn-primary btn-block">submit</button>
 </form>
 
 <br>

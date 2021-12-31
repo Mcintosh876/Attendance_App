@@ -1,6 +1,6 @@
 <?php
 require_once 'includes/auth_check.php';
-require_once 'DB/conn.php';
+require_once 'db/conn.php';
 
 if(isset($_POST['submit'])){
     $id = $_POST['id'];
@@ -15,7 +15,7 @@ if(isset($_POST['submit'])){
     $result = $crud-> editAttendee($id, $fname,$lname,$dob,$email,$contact,$specialty);
 
     if($result){
-        header("Location: viewrecords.php");
+        header("location: viewrecords.php");
     }
     else{
         include 'includes/errormessage.php';

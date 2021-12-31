@@ -2,12 +2,12 @@
 $title = 'Edit';
 require_once 'includes/header.php';
 require_once 'includes/auth_check.php';
-require_once 'DB/conn.php';
+require_once 'db/conn.php';
 $results = $crud->getSpecialties();
 if(!isset($_GET['id']))
 {
     include 'includes/errormessage.php';
-    header("Location: viewrecords.php");
+    header("location: viewrecords.php");
 }
 else{
     $id= $_GET['id'];
@@ -30,12 +30,12 @@ else{
   
 </div>
 <div class="form-group">
-   <label for="DOB">Date Of Birth</label>
+   <label for="dob">Date Of Birth</label>
   <input type="text" class="form-control" value= "<?php echo $attendee['dateofbirth'] ?>" id="dob" name="dob" >
  
 </div>
 <div class="form-group">
-<label for="Area of Specialization">Specialty</label>
+<label for="area of specialization">Specialty</label>
  <select class="form-select" id=" Specialization" name=" specialization">
    <?php while ($r = $results->fetch(PDO::FETCH_ASSOC)){?>
  <option value="<?php echo $r['specialty_id'] ?>"<?php if($r['specialty_id'] == $attendee['specialty_id']) echo 'selected'?>>
@@ -45,7 +45,7 @@ else{
 </div>
 
  <div class="form-group">
-  <label for="Email">Email address</label>
+  <label for="email">Email address</label>
   <input type="email" class="form-control" value= "<?php echo $attendee['emailaddress'] ?>" id="Email" name="email"
   aria-describedlby="emailHelp">
   <small id="emailHelp" class="form-text text-muted"> We'll never share your email with anyone else.</small>
